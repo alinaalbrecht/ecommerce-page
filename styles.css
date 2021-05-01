@@ -1,0 +1,325 @@
+.inactive {
+    display: none !important;
+    transition: all 2s ease-out;
+}
+
+:root {
+    --spacing: 12px 0;
+    --medium-large-text: 30px;
+    --subtitle-text: 24px;
+    --medium-text: 20px;
+    --body-text: 16px;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #FFECEC;
+    font-family: "Raleway", sans-serif;
+    margin: 0;
+}
+
+/* Nav Bar styles */
+.navbar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.hamburger-icon {
+    display: none;
+}
+
+.donut-logo {
+    width: 6em;
+    margin-top: 1%;
+    margin-left: 2%;
+}
+
+.nav-tabs {
+    width: 30%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.tab {
+    position: relative;
+    cursor: pointer;
+}
+
+.tab:hover {
+    text-decoration: underline;
+}
+
+.basket-quantity {
+    width: 80%;
+    height: 80%;
+    background-color: #F697CD;
+    position: absolute;
+    bottom: 50%;
+    left: 50%;
+    border-radius: 3px;
+    text-align: center;
+    color: #000;
+}
+
+.fa-shopping-basket  {
+    font-size: 28px;
+}
+
+
+/* Page content styles */
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.donut-hero {
+    width: 20em;
+    margin: var(--spacing);
+}
+
+h1,h2,h3 {
+    color: #F697CD;
+    font-weight: 900;
+    text-align: center;
+}
+
+h1 {
+    font-size: 40px;
+    margin: var(--spacing);
+}
+
+h2 {
+    font-size: var(--medium-large-text);
+    margin: var(--spacing);
+}
+
+.subtitle {
+    font-size: var(--subtitle-text);
+    margin: var(--spacing);
+    text-align: center;
+    width: 80%;
+}
+
+p {
+    font-size: var(--body-text);
+    margin: var(--spacing);
+    text-align: center;
+}
+
+button {
+    border-radius: 30px;
+    border: 1px solid #000;
+    background-color: #CE8C4F;
+    color: #fff;
+    margin: 12px;
+    cursor: pointer;
+}
+
+.cta {
+    font-size: var(--medium-text);
+    padding: 12px 70px;
+}
+
+.beige-area {
+    background-color: #FFF8EB;
+    width: 100%;
+    border-top: 1px solid #000;
+    border-bottom: 1px solid #000;
+    margin: 24px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 24px;
+}
+
+.locations {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 24px 0;
+}
+
+.product-card {
+    width: 30%;
+    flex-grow: 0;
+    background-color: #FFECEC;
+    border: 1px solid #000;
+}
+
+.location-info {
+    padding: 12px;
+}
+
+.large-black-text {
+    font-size: var(--medium-large-text);
+    font-weight: 900;
+}
+
+img {
+    width: 100%;
+}
+
+
+/* Menu page styles */
+
+.product-grid {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 70%;
+    margin: 24px 0;
+    padding: 24px 0;
+}
+
+.donut-item {
+    width: 33%;
+    margin: 24px 0;
+}
+
+.donut-image {
+    max-width: 120px;
+    height: 50%;
+}
+
+.quantity-selector {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 60%;
+}
+
+.add, .subtract {
+    border-radius: 100%;
+    background: #FFF8EB;
+    width: 30px;
+    height: 30px;
+    border: 1px solid #000;
+    font-size: 24px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.quantity {
+    font-size: var(--medium-text);
+}
+
+.donut-name {
+    font-size: var(--medium-text);
+    width: 90%;
+}
+
+.small-button {
+    font-size: var(--body-text);
+    padding: 0.4em 0;
+    margin: 12px;
+    width: 70%;
+}
+
+.donuts-added {
+    background-color: #F697CD;
+    color: #000;
+    width: 45%;
+    text-align: center;
+    border-radius: 30px;
+    padding: 1%;
+    /* transition: all 2s ease-out; */
+    opacity: 80%;
+    font-size: var(--body-text);
+}
+
+
+/* Footer styles */
+
+.footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    position: absolute;
+   /*  bottom: 0px; */
+}
+
+
+
+
+@media /* screen and */ (max-width: 1000px) {
+    .locations {
+        flex-wrap: wrap;
+        align-content: space-between;
+    }
+
+    .product-card {
+        width: 100%;
+        margin: var(--spacing);
+    }
+}
+
+@media (max-width: 640px) {
+    :root {
+        --spacing: 12px 0;
+        --medium-large-text: 1.5em;
+        --subtitle-text: 1.2em;
+        --medium-text: 1em;
+        --body-text: 12px;
+    }
+    .navbar {
+        margin: 5%;
+    }
+    .donut-logo {
+        width: 3em;
+        margin: 0;
+    }
+    .donut-hero {
+        width: 10em;
+    }
+    h1 {
+        font-size: 2em;
+    }
+    .footer {
+        flex-direction: column;
+    }
+    .product-grid {
+        width: 100%;
+    }
+    .donut-item {
+        width: 50%;
+    }
+
+    /* hamburger menu */
+    .hamburger-icon {
+        display: block;
+    }
+    .nav-tabs {
+        display: none;
+    }
+    .hamburger-menu {
+        width: 90%;
+    display: flex;
+    flex-direction: column;
+    background-color: #FFECEC;
+    position: absolute;
+    top: 6%;
+    margin: 0 auto;
+    text-align: center;
+    padding: var(--spacing);
+    }
+    .basket-quantity {
+        width: 20px;
+        height: 20px;
+    }
+    .tab {
+        margin: 2% 0;
+    }
+    .fa-shopping-basket {
+        font-size: 20px;
+    }
+}
