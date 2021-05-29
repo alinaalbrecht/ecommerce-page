@@ -9,6 +9,7 @@ import '@fortawesome/fontawesome-free/js/all';
 const tabs = [...document.querySelectorAll("[data-type='tab']")];
 tabs.forEach(tab => tab.addEventListener("click", showPageContents));
 
+
 function showPageContents(e) {
     const pages = [...document.querySelectorAll("[data-type='page']")];
     pages.forEach(page => page.classList.add("inactive"));
@@ -80,8 +81,9 @@ function addToBasket(e) {
 
 //Hamburger menu
 const hamburgerIcon = document.querySelector(".hamburger-icon");
-hamburgerIcon.addEventListener("click", toggleMenu);
+hamburgerIcon.addEventListener("click", () => setTimeout(toggleMenu, 300));
 
+tabs.forEach(tab => tab.addEventListener("click", () => setTimeout(toggleMenu, 300)));
 function toggleMenu() {
     let tabs = document.querySelector(".nav-tabs");
     tabs.style.display === "none" ? tabs.style.display = "flex" : tabs.style.display = "none";
