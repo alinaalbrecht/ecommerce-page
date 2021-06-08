@@ -7,5 +7,21 @@ module.exports = {
     sourceMapFilename: 'main.js.map',
     path: path.resolve(__dirname, 'dist'),
   },
-  devtool: 'source-map'
+  devtool: 'source-map',
+  module: {
+    rules: [
+      {
+        test: /\.m?js$/,
+        exclude: /node_modules/,
+        use: {
+          loader: 'babel-loader',
+          options: {
+            presets: [
+              ['@babel/preset-env', { targets: "defaults" }]
+            ]
+          }
+        }
+      }
+    ]
+  }
 };

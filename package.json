@@ -10,8 +10,11 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@babel/core": "^7.14.3",
+    "@babel/preset-env": "^7.14.4",
     "@fortawesome/fontawesome-free": "^5.15.3",
-    "webpack": "^5.36.0",
+    "babel-loader": "^8.2.2",
+    "webpack": "^5.38.1",
     "webpack-cli": "^4.6.0"
   }
 }
