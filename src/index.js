@@ -85,7 +85,8 @@ hamburgerIcon.addEventListener("click", () => setTimeout(toggleMenu, 300));
 
 tabs.forEach(tab => tab.addEventListener("click", () => setTimeout(toggleMenu, 300)));
 function toggleMenu() {
-    let tabs = document.querySelector(".nav-tabs");
+    if (screen.width <= 1000)
+    {let tabs = document.querySelector(".nav-tabs");
     tabs.style.display === "none" ? tabs.style.display = "flex" : tabs.style.display = "none";
-    tabs.classList.add("hamburger-menu");
+    tabs.classList.add("hamburger-menu");}
 }
