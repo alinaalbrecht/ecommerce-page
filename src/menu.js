@@ -7,7 +7,7 @@ const menu = (() => {
     menu.setAttribute("data-name", "menu");
     menu.innerHTML = `
     <h1>Our Menu</h1>
-<p class="subtitle">Either place an order online or visit us in person to tase our tasty treats</p>
+<p class="subtitle">Either place an order online or visit us in person to try our tasty treats</p>
 <div class="product-grid">
     <div class="donut-item container">
         <div class="donut-image">
